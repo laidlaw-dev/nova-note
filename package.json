@@ -1,0 +1,22 @@
+{
+  "name": "nova-note",
+  "version": "1.0.0",
+  "description": "- A web based note taking app with functionality to create, view, edit and delete notes. Only notes created by a user can be seen by that user. Particular emphasis on creating notes as quickly as possible. - Project name: nova-note.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laidlaw-dev/nova-note.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "homepage": "https://github.com/laidlaw-dev/nova-note#readme",
+  "scripts": {
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
