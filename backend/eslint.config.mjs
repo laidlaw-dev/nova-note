@@ -3,6 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import { defineConfig } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import tsParser from '@typescript-eslint/parser';
 
 export default defineConfig([
   {
@@ -13,14 +14,13 @@ export default defineConfig([
       tseslint.configs.recommended,
       eslintConfigPrettier,
     ],
-
-    parser: '@typescript-eslint/parser',
-    parserOptions: {
-      project: './tsconfig.json',
-      tsconfigRootDir: __dirname,
+    languageOptions: {
+      globals: globals.browser,
+      parser: tsParser,
+      parserOptions: {
+        project: './tsconfig.json',
+      },
     },
-
-    languageOptions: { globals: globals.browser },
     rules: {
       'no-unused-vars': ['off'],
       '@typescript-eslint/no-unused-vars': [
