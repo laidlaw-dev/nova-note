@@ -1,0 +1,26 @@
+{
+  "name": "nova-note-backend",
+  "version": "1.0.0",
+  "description": "nova-note backend",
+  "main": "app.js",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build ts": "tsc",
+    "build sam": "sam build",
+    "start sam dev": "sam local start-api",
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@types/aws-lambda": "^8.10.155",
+    "@types/node": "^24.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.4.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
+  }
+}
