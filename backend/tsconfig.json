@@ -4,8 +4,8 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "strict": true
   }

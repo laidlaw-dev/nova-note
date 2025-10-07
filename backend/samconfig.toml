@@ -25,6 +25,8 @@ watch = true
 
 [default.local_start_api.parameters]
 warm_containers = "EAGER"
+CorsAllowOrigin="'http://localhost:5173'"
 
 [default.local_start_lambda.parameters]
 warm_containers = "EAGER"
+CorsAllowOrigin="'http://localhost:5173'"

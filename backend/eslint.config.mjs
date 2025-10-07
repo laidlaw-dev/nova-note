@@ -13,6 +13,13 @@ export default defineConfig([
       tseslint.configs.recommended,
       eslintConfigPrettier,
     ],
+
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+      project: './tsconfig.json',
+      tsconfigRootDir: __dirname,
+    },
+
     languageOptions: { globals: globals.browser },
     rules: {
       'no-unused-vars': ['off'],

@@ -8,12 +8,22 @@ Globals:
   Function:
     Timeout: 3
 
+Parameters:
+  CorsAllowOrigin:
+    Type: String
+    Default: "'*'"
+    Description: 'CORS Allow Origin header value'
+
 Resources:
   ApiGatewayApi:
     Type: AWS::Serverless::Api
     Properties:
       Name: nova-note-api
       StageName: Prod
+      Cors:
+        AllowOrigin: !Ref CorsAllowOrigin
+        AllowHeaders: "'Content-Type,Authorization'"
+        AllowMethods: "'OPTIONS,GET,POST,PUT,DELETE'"
 
   HelloWorldFunction:
     Type: AWS::Serverless::Function
@@ -22,10 +32,14 @@ Resources:
       Runtime: nodejs22.x
       Architectures:
         - x86_64
+      Environment:
+        Variables:
+          CLIENT_ORIGIN: !Ref CorsAllowOrigin
       Events:
         Api:
           Type: Api
           Properties:
+            RestApiId: !Ref ApiGatewayApi
             Path: /hello
             Method: get
 
